@@ -45,6 +45,14 @@
               </a>
             </li>
             <li class="sidebar-item">
+              <a class="sidebar-link" href="inven.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">재고관리</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
               <a class="sidebar-link" href="index.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
@@ -182,7 +190,7 @@
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
                     </a>
-                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="index.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
@@ -202,7 +210,7 @@
                     <h5 class="card-title fw-semibold">품목 현황</h5>
                   </div>
                   <div class="position-absolute top-1 end-0">
-                    <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop">품목 설정</button>
+                    <button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#staticBackdrop">품목 설정</button>
                   </div>
                 </div>
                 <!-- Button trigger modal -->
@@ -211,7 +219,7 @@
                 </button> -->
 
                 <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                <div class="modal fade" id="staticBackdrop"  data-bs-keyboard="false"
                   tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
@@ -223,7 +231,7 @@
                         <!-- 내용 -->
                         <div class="input-group mb-3">                          
                           <input type="text" class="form-control" id="infoCodeber" placeholder="품목코드로 검색" aria-label="Recipient's username" aria-describedby="button-addon2">
-                          <button class="btn btn-outline-secondary" type="button" id="infoCodeBtn">확인</button>
+                          <button class="btn btn-outline-secondary" type="button" id="infoCodeBtn">검색</button>
                           <button class="btn btn-outline-danger" type="button" id="removeBtn">삭제</button>
                         </div>
                         <br>
@@ -257,7 +265,7 @@
                         <th scope="col">거래처</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="table">
                       <!-- data -->
                     </tbody>
                   </table>

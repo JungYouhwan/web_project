@@ -6,7 +6,7 @@ document.forms.loginFrm.addEventListener('submit', function (e) {
     let members = JSON.parse(localStorage.getItem('memberData'));
     let exist = false;
     for (let i = 0; i < members.length; i++) {
-      if (members[i].id == id && members[i].password == pw) {
+      if (members[i].id == id && members[i].pw == pw) {
         exist = true;
       }
     }

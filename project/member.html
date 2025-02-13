@@ -24,8 +24,7 @@
                 <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
                   <!-- <img src="../assets/images/logos/dark-logo.svg" width="180" alt=""> -->
                 </a>
-                <h2 class="text-center">환영합니다!! 로그인을 해주세요</h2>
-                <br>
+                <h2 class="text-center">회원 가입</h2>
                 <br>
                 <form name="loginFrm">
                   <div class="mb-3">
@@ -36,19 +35,16 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" name="pw">
                   </div>
-                  <div class="d-flex align-items-center justify-content-between mb-4">
-                    <!-- <div class="form-check">
-                      <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
-                      <label class="form-check-label text-dark" for="flexCheckChecked">
-                        Remeber this Device
-                      </label>
-                    </div> -->
-                    <!-- <p class="fs-4 mb-0 fw-bold">아이디가 없으신가요?</p> -->
-                    <a class="text-primary fw-bold ms-2" href="member.html">회원가입</a>
-                    <a class="text-primary fw-bold" href="./index.html">비밀번호를 잊었습니까?</a>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" aria-describedby="UserIdHelp">
                   </div>
-                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">로그인</button>
+                  <br>
+                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" id="memberBtn">로그인</button>
                 </form>
+                <div>
+                    <a href="index.html">돌아가기</a>
+                </div>
               </div>
             </div>
           </div>
@@ -58,12 +54,25 @@
   </div>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="init.js"></script>
   <script>
-    localStorage.setItem('memberData', JSON.stringify(memberData));
-    </script>
-    <script src="index.js"></script>
-  
+    let memberData = [];
+    memberData = JSON.parse(localStorage.getItem('memberData'));
+
+      document.querySelector('#memberBtn').addEventListener('click',function(e) {
+        e.preventDefault();
+        let id = document.querySelector('input[name=id]').value;
+        let pw = document.querySelector('input[name=pw]').value;
+        let name = document.querySelector('input[name=name]').value;
+        
+        let members = {id , pw, name};
+        memberData.push(members);
+        localStorage.setItem('memberData', JSON.stringify(memberData));
+        document.querySelector('input[name=id]').value = '';
+        document.querySelector('input[name=pw]').value = '';
+        document.querySelector('input[name=name]').value = '';
+        alert("회원가입이 완료되었습니다.");
+      })
+  </script>
 </body>
 
 </html>

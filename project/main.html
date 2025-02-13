@@ -51,6 +51,14 @@
               </a>
             </li>
             <li class="sidebar-item">
+              <a class="sidebar-link" href="inven.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">재고관리</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
               <a class="sidebar-link" href="index.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-login"></i>
@@ -58,83 +66,7 @@
                 <span class="hide-menu">Logout</span>
               </a>
             </li>
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-file-description"></i>
-                </span>
-                <span class="hide-menu">재고관리</span>
-              </a>
-            </li> -->
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cards"></i>
-                </span>
-                <span class="hide-menu">Card</span>
-              </a>
-            </li> -->
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-alert-circle"></i>
-                </span>
-                <span class="hide-menu">Forms</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-typography"></i>
-                </span>
-                <span class="hide-menu">Typography</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">AUTH</span>
-            </li>
-            
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-user-plus"></i>
-                </span>
-                <span class="hide-menu">Register</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">EXTRA</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-mood-happy"></i>
-                </span>
-                <span class="hide-menu">Icons</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-aperture"></i>
-                </span>
-                <span class="hide-menu">Sample Page</span>
-              </a>
-            </li> -->
           </ul>
-          <!-- <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
-            <div class="d-flex">
-              <div class="unlimited-access-title me-3">
-                <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Upgrade to pro</h6>
-                <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/" target="_blank" class="btn btn-primary fs-2 fw-semibold lh-sm">Buy Pro</a>
-              </div>
-              <div class="unlimited-access-img">
-                <img src="../assets/images/backgrounds/rocket.png" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div> -->
         </nav>
         <!-- End Sidebar navigation -->
       </div>
@@ -181,7 +113,7 @@
                       <i class="ti ti-list-check fs-6"></i>
                       <p class="mb-0 fs-3">My Task</p>
                     </a>
-                    <a href="./authentication-login.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
+                    <a href="index.html" class="btn btn-outline-primary mx-3 mt-2 d-block">Logout</a>
                   </div>
                 </div>
               </li>
@@ -200,16 +132,8 @@
                   <div class="mb-2 mb-sm-0">
                     <h5 class="card-title fw-semibold">신제품 입고 예정</h5>
                   </div>
-                  <!-- 옵션 <div>
-                    <select class="form-select">
-                      <option value="1">March33 2023</option>
-                      <option value="2">April 2023</option>
-                      <option value="3">May 2023</option>
-                      <option value="4">June 2023</option>
-                    </select>
-                  </div> -->
                 </div>
-                <div style="width:100%; height:300px; overflow:auto">
+                <div style="width:100%; height:350px; overflow:auto">
                   <table class="table">
                     <thead class="table-primary">
                       <tr>
@@ -353,9 +277,9 @@
             <div class="card w-100">
               <div class="card-body p-3">
                 <h5 class="card-title fw-semibold mb-5">재고관리</h5>
-                <div class="table-responsive">
+                <div class="table-responsive" style="width:100%; height:400px; overflow:auto">
                   <table class="table text-nowrap mb-0 align-middle">
-                    <thead class="text-dark fs-4">
+                    <thead class="text-dark fs-4 table-light">
                       <tr>
                         <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">품목코드</h6>
@@ -367,97 +291,21 @@
                           <h6 class="fw-semibold mb-0">위치</h6>
                         </th>
                         <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">재고</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">실재 재고</h6>
+                        </th>
+                        <th class="border-bottom-0">
+                          <h6 class="fw-semibold mb-0">합계</h6>
+                        </th>
+                        <th class="border-bottom-0">
                           <h6 class="fw-semibold mb-0">재고상황</h6>
-                        </th>
-                        <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">실재고</h6>
-                        </th>
-                        <th class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">실재고</h6>
                         </th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">1</h6>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-1">Sunil Joshi</h6>
-                          <span class="fw-normal">Web Designer</span>
-                        </td>
-                        <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">Elite Admin</p>
-                        </td>
-                        <td class="border-bottom-0">
-                          <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-primary rounded-3 fw-semibold">Low</span>
-                          </div>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0 fs-4">$3.9</h6>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">2</h6>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-1">Andrew McDownland</h6>
-                          <span class="fw-normal">Project Manager</span>
-                        </td>
-                        <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">Real Homes WP Theme</p>
-                        </td>
-                        <td class="border-bottom-0">
-                          <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-secondary rounded-3 fw-semibold">Medium</span>
-                          </div>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0 fs-4">$24.5k</h6>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">3</h6>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-1">Christopher Jamil</h6>
-                          <span class="fw-normal">Project Manager</span>
-                        </td>
-                        <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">MedicalPro WP Theme</p>
-                        </td>
-                        <td class="border-bottom-0">
-                          <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-danger rounded-3 fw-semibold">High</span>
-                          </div>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0 fs-4">$12.8k</h6>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0">4</h6>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-1">Nirav Joshi</h6>
-                          <span class="fw-normal">Frontend Engineer</span>
-                        </td>
-                        <td class="border-bottom-0">
-                          <p class="mb-0 fw-normal">Hosting Press HTML</p>
-                        </td>
-                        <td class="border-bottom-0">
-                          <div class="d-flex align-items-center gap-2">
-                            <span class="badge bg-success rounded-3 fw-semibold">Critical</span>
-                          </div>
-                        </td>
-                        <td class="border-bottom-0">
-                          <h6 class="fw-semibold mb-0 fs-4">$2.4k</h6>
-                        </td>
-                      </tr>
+                    <tbody id="inventable">
+                      <!--inventable-->
                     </tbody>
                   </table>
                 </div>
@@ -466,14 +314,13 @@
           </div>
         </div>
 
+        <!--card-->
+        <h3 class="fw-semibold text-center">신제품 샘플</h3>
         <div class="row" id="prcard">
-          <!--card-->
 
         </div>
         <div class="py-6 px-6 text-center">
-          <p class="mb-0 fs-4">Design and Developed by <a href="https://adminmart.com/" target="_blank"
-              class="pe-1 text-primary text-decoration-underline">AdminMart.com</a> Distributed by <a
-              href="https://themewagon.com">ThemeWagon</a></p>
+          <p class="mb-0 fs-4">문의는 053-XXX-XXXX로 문의주세요.</p>
         </div>
       </div>
     </div>
@@ -485,55 +332,13 @@
   <!-- <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script> -->
   <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
   <script src="../assets/js/dashboard.js"></script>
+
   <script src="init.js"></script>
+  <script src="main.js"></script>
   <script>
     localStorage.setItem('invenData', JSON.stringify(invenData));
     localStorage.setItem('productData', JSON.stringify(productData));
     localStorage.setItem('newProduct', JSON.stringify(newProduct));
-
-    let productNew = [];
-    productNew = JSON.parse(localStorage.getItem('newProduct'));
-
-    productNew.forEach(function (product) {
-      let pro = `
-                      <tr>
-                        <td class="table-warning">${product.newCode}</td>
-                        <td>${product.newName}</td>
-                        <td class="table-info">${product.newCate}</td>
-                        <td>${product.newPack}</td>
-                        <td class="table-secondary">${product.newGrup}</td>
-                        <td>${product.newRet}</td>
-                        <td class="table-light">${product.newStore}</td>
-                      </tr>`
-      let productTable = document.querySelector('#product');
-      productTable.insertAdjacentHTML('beforeend', pro);
-    });
-
-    productNew.forEach(function (product) {
-      let card = `
-      <div class="col-sm-6 col-xl-3">
-            <div class="card overflow-hidden rounded-2">
-              <div class="position-relative">
-                <img src=${product.newImage} class="card-img-top rounded-0" alt="...">
-                </div>
-              <div class="card-body pt-3 p-4">
-                <h6 class="fw-semibold fs-4 mb-0">${product.newRet}</h6>
-                <div class="d-flex align-items-center justify-content-between">
-                  <h6 class="fw-semibold fs-4">${product.newName}</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-      `
-      let productcard = document.querySelector('#prcard');
-      productcard.insertAdjacentHTML('beforeend', card);
-    });
-    let today = new Date;
-    let year = today.getFullYear();
-    let month = (today.getMonth() + 1).toString().padStart(2, '0');
-    let day = today.getDate().toString().padStart(2, '0');
-    let todays = year + '-' + month + '-' + day;
-    document.querySelector('#today').append(todays);
   </script>
 </body>
 

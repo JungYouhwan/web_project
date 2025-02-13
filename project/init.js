@@ -6,13 +6,13 @@
 로그인
 -아이디와 비밀번호 입력 후 로그인.
 
-재고관리
--전체 상품의 목록을 화면에 출력(품목코드, 품목명, 위치, 재고, 실 재고)
--재고 수정가능.
-
 품목관리
 -품목코드, 품목명, 카테고리, 규격정보, 품목그룹, 거래처 명, 거래처
 -품목 추가, 삭제, 수정 가능.
+
+재고관리
+-전체 상품의 목록을 화면에 출력(품목코드, 품목명, 위치, 재고, 실 재고)
+-재고 수정가능.
 
 */
 
@@ -30,7 +30,7 @@ const invenData = [
     invenName: "하리보 골드베어 200g",
     invenLocat: "3번창고",
     invenTory: 150,
-    invenReal: 130
+    invenReal: 160
   },
   { 
     invenCode: "A003",
@@ -44,7 +44,7 @@ const invenData = [
     invenName: "롯데 과자 새우깡 120g",
     invenLocat: "4번창고",
     invenTory: 250,
-    invenReal: 240
+    invenReal: 255
   },
   { 
     invenCode: "A005",
@@ -58,7 +58,7 @@ const invenData = [
     invenName: "팔도 비빔면 120g",
     invenLocat: "5번창고",
     invenTory: 300,
-    invenReal: 290
+    invenReal: 310
   },
   { 
     invenCode: "A007",
@@ -86,7 +86,7 @@ const invenData = [
     invenName: "정식품 두유 200ml",
     invenLocat: "2번창고",
     invenTory: 190,
-    invenReal: 180
+    invenReal: 192
   },
   { 
     invenCode: "A011",
@@ -135,7 +135,7 @@ const invenData = [
     invenName: "마시멜로 100g",
     invenLocat: "4번창고",
     invenTory: 180,
-    invenReal: 170
+    invenReal: 182
   },
   { 
     invenCode: "A018",
@@ -401,9 +401,9 @@ const newProduct = [
 ]
 
 const memberData = [
-  {id:'user01', password: '1111', product: 'P001', qty:1},
-  {id:'user02', password: '2222', product: 'P002', qty:2},
-  {id:'user03', password: '3333', product: 'P003', qty:3},
-  {id:'user04', password: '4444', product: 'P004', qty:4},
-  {id:'user05', password: '5555', product: 'P005', qty:5}
+  {id:'user01', pw: '1111', name: '정유환'},
+  {id:'user02', pw: '2222', name: '홍길동'},
+  {id:'user03', pw: '3333', name: '동길동'},
+  {id:'user04', pw: '4444', name: '퐁길동'},
+  {id:'user05', pw: '5555', name: '콩길동'}
 ]
