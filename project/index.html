@@ -10,6 +10,7 @@
 </head>
 
 <body>
+  
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
@@ -21,9 +22,11 @@
             <div class="card mb-0">
               <div class="card-body">
                 <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <img src="../assets/images/logos/dark-logo.svg" width="180" alt="">
+                  <!-- <img src="../assets/images/logos/dark-logo.svg" width="180" alt=""> -->
                 </a>
-                <p class="text-center">환영합니다!! 로그인을 해주세요</p>
+                <h2 class="text-center">환영합니다!! 로그인을 해주세요</h2>
+                <br>
+                <br>
                 <form name="loginFrm">
                   <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">UserId</label>
@@ -44,7 +47,7 @@
                   </div>
                   <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">로그인</button>
                   <div class="d-flex align-items-center justify-content-center">
-                    <p class="fs-4 mb-0 fw-bold">New to Modernize?</p>
+                    <p class="fs-4 mb-0 fw-bold">작업 중</p>
                     <a class="text-primary fw-bold ms-2" href="./authentication-register.html">Create an account</a>
                   </div>
                 </form>
@@ -59,28 +62,10 @@
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="init.js"></script>
   <script>
-    let members = [];
-    members = JSON.parse(localStorage.getItem('membersData'));
-    console.log(members);
-    document.forms.loginFrm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      let id = document.querySelector('input[name="id"]').value;
-      let pw = document.querySelector('input[name="pw"]').value;
-      let exist = false;
-      for(let i=0; i<members.length; i++){
-        if(members[i].id == id && members[i].pw == pw){
-          exist = true;
-        }
-      }
-      if(exist){
-        window.location.href = "main.html";
-        }
-      alert('아이디 비밀번호를 확인하세요')
-      }
-        
-    )
-
-  </script>
+    localStorage.setItem('memberData', JSON.stringify(memberData));
+    </script>
+    <script src="index.js"></script>
+  
 </body>
 
 </html>

@@ -18,7 +18,7 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="./index.html" class="text-nowrap logo-img">
+          <a href="./main.html" class="text-nowrap logo-img">
             <img src="../assets/images/logos/dark-logo.svg" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -29,7 +29,7 @@
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
             <li class="sidebar-item">
-              <a class="sidebar-link" href="./index.html" aria-expanded="false">
+              <a class="sidebar-link" href="./main.html" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -42,6 +42,14 @@
                   <i class="ti ti-article"></i>
                 </span>
                 <span class="hide-menu">품목관리</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="index.html" aria-expanded="false">
+                <span>
+                  <i class="ti ti-login"></i>
+                </span>
+                <span class="hide-menu">Logout</span>
               </a>
             </li>
             <!-- <li class="sidebar-item">
@@ -154,7 +162,7 @@
           </ul>
           <div class="navbar-collapse justify-content-end px-0" id="navbarNav">
             <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
-              <a href="#" target="_blank" class="btn btn-primary">로그인</a>
+              <a href="/index.html" target="_blank" class="btn btn-danger">로그아웃</a>
               <li class="nav-item dropdown">
                 <a class="nav-link nav-icon-hover" href="javascript:void(0)" id="drop2" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -194,9 +202,7 @@
                     <h5 class="card-title fw-semibold">품목 현황</h5>
                   </div>
                   <div class="position-absolute top-1 end-0">
-                    <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop">수정</button>
-                    <button class="btn btn-success ">추가</button>
-                    <button class="btn btn-danger ">삭제</button>
+                    <button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#staticBackdrop">품목 설정</button>
                   </div>
                 </div>
                 <!-- Button trigger modal -->
@@ -210,25 +216,29 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h1 class="modal-title fs-5">수정</h1>
+                        <h1 class="modal-title fs-5">설정</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                       </div>
                       <div class="modal-body">
                         <!-- 내용 -->
-                        <div class="input-group mb-3">
-                          <input type="text" class="form-control" placeholder="품목코드" aria-label="Recipient's username" aria-describedby="button-addon2">
-                          <button class="btn btn-outline-secondary" type="button" id="button-addon2">확인</button>
+                        <div class="input-group mb-3">                          
+                          <input type="text" class="form-control" id="infoCodeber" placeholder="품목코드로 검색" aria-label="Recipient's username" aria-describedby="button-addon2">
+                          <button class="btn btn-outline-secondary" type="button" id="infoCodeBtn">확인</button>
+                          <button class="btn btn-outline-danger" type="button" id="removeBtn">삭제</button>
                         </div>
-                         품목명:<input type="text" id="Name"><br>
-                         카테고리:<input type="text" id="Cate"><br>
-                         규격정보:<input type="text" id="Pack"><br>
-                         품목그룹:<input type="text" id="Grup"><br>
-                         거래처명:<input type="text" id="Ret"><br>
-                         거래처:<input type="text" id="Store"><br>
+                        <br>
+                         품목코드<input class="form-control" type="text" id="infoCode"><br>
+                         품목명<input class="form-control" type="text" id="infoName"><br>
+                         카테고리<input class="form-control" type="text" id="infoCate"><br>
+                         규격정보<input class="form-control" type="text" id="infoPack"><br>
+                         품목그룹<input class="form-control" type="text" id="infoGrup"><br>
+                         거래처명<input class="form-control" type="text" id="infoRet"><br>
+                         거래처<input class="form-control" type="text" id="infoStore"><br>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-                        <button type="button" class="btn btn-primary">수정</button>
+                        <button type="button" class="btn btn-info" id="addBtn">추가</button>
+                        <button type="button" class="btn btn-primary" id="infoBtn">수정</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="modals">취소</button>
                       </div>
                     </div>
                   </div>

@@ -347,11 +347,63 @@ const productData = [
     productStore: "이마트 만촌점"
   }
 ]
+const newProduct = [
+  { 
+    newCode: "A021",
+    newName: "열라면 120g",
+    newCate: "라면",
+    newPack: "5개",
+    newGrup: "라면",
+    newRet: "오뚜기",
+    newStore: "미정",
+    newImage: "/assets/images/products/hot.JPG"
+  },
+  { 
+    newCode: "A022",
+    newName: "진라면 순한맛 120g",
+    newCate: "라면",
+    newPack: "5개",
+    newGrup: "라면",
+    newRet: "오뚜기",
+    newStore: "미정",
+    newImage: "/assets/images/products/jin.JPG"
+  },
+  { 
+    newCode: "A023",
+    newName: "라면사리 110g",
+    newCate: "라면",
+    newPack: "5개",
+    newGrup: "라면",
+    newRet: "오뚜기",
+    newStore: "미정",
+    newImage: "/assets/images/products/noodles.JPG"
+  },
+  { 
+    newCode: "A024",
+    newName: "무파마 122g",
+    newCate: "라면",
+    newPack: "5개",
+    newGrup: "라면",
+    newRet: "농심",
+    newStore: "미정",
+    newImage: "/assets/images/products/mu.JPG"
+  },
+  { 
+    newCode: "A025",
+    newName: "팔도 틈새라면 120g",
+    newCate: "라면",
+    newPack: "5개",
+    newGrup: "라면",
+    newRet: "paldo",
+    newStore: "미정",
+    newImage: "/assets/images/products/teum.JPG"
+  }
+]
 
 const memberData = [
-  {id:'user01', password: 1111, product: 'P001', qty:1},
-  {id:'user02', password: 2222, product: 'P002', qty:2},
-  {id:'user03', password: 3333, product: 'P003', qty:3},
-  {id:'user04', password: 4444, product: 'P004', qty:4},
-  {id:'user05', password: 5555, product: 'P005', qty:5}
+  {id:'user01', password: '1111', product: 'P001', qty:1},
+  {id:'user02', password: '2222', product: 'P002', qty:2},
+  {id:'user03', password: '3333', product: 'P003', qty:3},
+  {id:'user04', password: '4444', product: 'P004', qty:4},
+  {id:'user05', password: '5555', product: 'P005', qty:5}
 ]

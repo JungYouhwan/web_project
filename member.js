@@ -33,4 +33,3 @@ document.forms.addMember.addEventListener('submit', function(e){
   members.push(id, pw, name);
   localStorage.setItem('members', JSON.stringify(members));
 })
-console.log(members);
