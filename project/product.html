@@ -47,7 +47,7 @@
             <li class="sidebar-item">
               <a class="sidebar-link" href="inven.html" aria-expanded="false">
                 <span>
-                  <i class="ti ti-article"></i>
+                  <i class="ti ti-file-description"></i>
                 </span>
                 <span class="hide-menu">재고관리</span>
               </a>
@@ -60,90 +60,7 @@
                 <span class="hide-menu">Logout</span>
               </a>
             </li>
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-alerts.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-file-description"></i>
-                </span>
-                <span class="hide-menu">재고관리</span>
-              </a>
-            </li> -->
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-card.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-cards"></i>
-                </span>
-                <span class="hide-menu">Card</span>
-              </a>
-            </li> -->
-            <!-- <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-forms.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-alert-circle"></i>
-                </span>
-                <span class="hide-menu">Forms</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./ui-typography.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-typography"></i>
-                </span>
-                <span class="hide-menu">Typography</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">AUTH</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-login"></i>
-                </span>
-                <span class="hide-menu">Login</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./authentication-register.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-user-plus"></i>
-                </span>
-                <span class="hide-menu">Register</span>
-              </a>
-            </li>
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">EXTRA</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./icon-tabler.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-mood-happy"></i>
-                </span>
-                <span class="hide-menu">Icons</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="./sample-page.html" aria-expanded="false">
-                <span>
-                  <i class="ti ti-aperture"></i>
-                </span>
-                <span class="hide-menu">Sample Page</span>
-              </a>
-            </li> -->
           </ul>
-          <!-- <div class="unlimited-access hide-menu bg-light-primary position-relative mb-7 mt-5 rounded">
-            <div class="d-flex">
-              <div class="unlimited-access-title me-3">
-                <h6 class="fw-semibold fs-4 mb-6 text-dark w-85">Upgrade to pro</h6>
-                <a href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/" target="_blank" class="btn btn-primary fs-2 fw-semibold lh-sm">Buy Pro</a>
-              </div>
-              <div class="unlimited-access-img">
-                <img src="../assets/images/backgrounds/rocket.png" alt="" class="img-fluid">
-              </div>
-            </div>
-          </div> -->
         </nav>
         <!-- End Sidebar navigation -->
       </div>
@@ -163,8 +80,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link nav-icon-hover" href="javascript:void(0)">
-                <i class="ti ti-bell-ringing"></i>
-                <div class="notification bg-primary rounded-circle"></div>
+                <i class="ti ti-bell-ringing" id="loginname"></i>
               </a>
             </li>
           </ul>
@@ -211,6 +127,9 @@
                   </div>
                   <div class="position-absolute top-1 end-0">
                     <button class="btn btn-info " data-bs-toggle="modal" data-bs-target="#staticBackdrop">품목 설정</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Backdrop">
+                      품목 등록
+                    </button>
                   </div>
                 </div>
                 <!-- Button trigger modal -->
@@ -219,8 +138,8 @@
                 </button> -->
 
                 <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop"  data-bs-keyboard="false"
-                  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -229,28 +148,55 @@
                       </div>
                       <div class="modal-body">
                         <!-- 내용 -->
-                        <div class="input-group mb-3">                          
-                          <input type="text" class="form-control" id="infoCodeber" placeholder="품목코드로 검색" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" id="infoCodeber" placeholder="품목코드로 검색"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
                           <button class="btn btn-outline-secondary" type="button" id="infoCodeBtn">검색</button>
-                          <button class="btn btn-outline-danger" type="button" id="removeBtn">삭제</button>
                         </div>
                         <br>
-                         품목코드<input class="form-control" type="text" id="infoCode"><br>
-                         품목명<input class="form-control" type="text" id="infoName"><br>
-                         카테고리<input class="form-control" type="text" id="infoCate"><br>
-                         규격정보<input class="form-control" type="text" id="infoPack"><br>
-                         품목그룹<input class="form-control" type="text" id="infoGrup"><br>
-                         거래처명<input class="form-control" type="text" id="infoRet"><br>
-                         거래처<input class="form-control" type="text" id="infoStore"><br>
+                        품목코드<input class="form-control" type="text" id="infoCode" disabled><br>
+                        품목명<input class="form-control" type="text" id="infoName"><br>
+                        카테고리<input class="form-control" type="text" id="infoCate"><br>
+                        규격정보<input class="form-control" type="text" id="infoPack"><br>
+                        품목그룹<input class="form-control" type="text" id="infoGrup"><br>
+                        거래처명<input class="form-control" type="text" id="infoRet"><br>
+                        거래처<input class="form-control" type="text" id="infoStore"><br>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-info" id="addBtn">추가</button>
+                        <button class="btn btn-danger" type="button" id="removeBtn">삭제</button>
                         <button type="button" class="btn btn-primary" id="infoBtn">수정</button>
                         <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="modals">취소</button>
                       </div>
                     </div>
                   </div>
                 </div>
+
+                <!-- Modal2 -->
+                <div class="modal fade" id="Backdrop" data-bs-keyboard="false" tabindex="-1"
+                  aria-labelledby="BackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">등록</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        품목코드<input class="form-control" type="text" id="addCode"><br>
+                        품목명<input class="form-control" type="text" id="addName"><br>
+                        카테고리<input class="form-control" type="text" id="addCate"><br>
+                        규격정보<input class="form-control" type="text" id="addPack"><br>
+                        품목그룹<input class="form-control" type="text" id="addGrup"><br>
+                        거래처명<input class="form-control" type="text" id="addRet"><br>
+                        거래처<input class="form-control" type="text" id="addStore"><br>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-info" id="addBtn">등록</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <!--table-->
                 <div style="width:100%; height:800px; overflow:auto">
                   <table class="table" border="1">

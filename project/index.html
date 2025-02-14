@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  
+
   <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
@@ -21,9 +21,6 @@
           <div class="col-md-8 col-lg-6 col-xxl-3">
             <div class="card mb-0">
               <div class="card-body">
-                <a href="./index.html" class="text-nowrap logo-img text-center d-block py-3 w-100">
-                  <!-- <img src="../assets/images/logos/dark-logo.svg" width="180" alt=""> -->
-                </a>
                 <h2 class="text-center">환영합니다!! 로그인을 해주세요</h2>
                 <br>
                 <br>
@@ -37,17 +34,13 @@
                     <input type="password" class="form-control" name="pw">
                   </div>
                   <div class="d-flex align-items-center justify-content-between mb-4">
-                    <!-- <div class="form-check">
-                      <input class="form-check-input primary" type="checkbox" value="" id="flexCheckChecked" checked>
-                      <label class="form-check-label text-dark" for="flexCheckChecked">
-                        Remeber this Device
-                      </label>
-                    </div> -->
-                    <!-- <p class="fs-4 mb-0 fw-bold">아이디가 없으신가요?</p> -->
-                    <a class="text-primary fw-bold ms-2" href="member.html">회원가입</a>
-                    <a class="text-primary fw-bold" href="./index.html">비밀번호를 잊었습니까?</a>
+                    <a class="text-primary fw-bold" data-bs-toggle="modal" data-bs-target="#Modal"><button
+                        class="btn btn-link">회원가입</button></a>
+                    <a class="text-primary fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal"><button
+                        class="btn btn-link">비밀번호를 잊었습니까?</button></a>
                   </div>
-                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2">로그인</button>
+                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2"
+                    id="loginBtn">로그인</button>
                 </form>
               </div>
             </div>
@@ -56,14 +49,79 @@
       </div>
     </div>
   </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">비밀번호 찾기</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group mb-3">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="searchid" placeholder="아이디를 입력해주세요."
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="searchBtn">검색</button>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="pws" placeholder="비밀번호" aria-label="Recipient's username"
+                aria-describedby="basic-addon2" disabled>
+              <input type="text" class="form-control" id="names" placeholder="이름" aria-label="Recipient's username"
+                aria-describedby="basic-addon2" disabled>
+            </div>
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">회원가입</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form name="loginFrm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">UserId</label>
+              <input type="text" class="form-control" name="id" aria-describedby="UserIdHelp">
+            </div>
+            <div class="mb-4">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" name="pw">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" aria-describedby="UserIdHelp">
+            </div>
+            <br>
+          </form>
+          <button type="button" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" id="memberBtn">회원가입</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="init.js"></script>
   <script>
+    localStorage.setItem('invenData', JSON.stringify(invenData));
+    localStorage.setItem('productData', JSON.stringify(productData));
+    localStorage.setItem('newProduct', JSON.stringify(newProduct));
     localStorage.setItem('memberData', JSON.stringify(memberData));
-    </script>
-    <script src="index.js"></script>
-  
+  </script>
+  <script src="index.js"></script>
+
 </body>
 
 </html>

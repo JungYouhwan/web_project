@@ -39,12 +39,12 @@
                     <label for="exampleInputEmail1" class="form-label">Name</label>
                     <input type="text" class="form-control" name="name" aria-describedby="UserIdHelp">
                   </div>
+                  <div>
+                      <a href="index.html">돌아가기</a>
+                  </div>
                   <br>
-                  <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" id="memberBtn">로그인</button>
                 </form>
-                <div>
-                    <a href="index.html">돌아가기</a>
-                </div>
+                <button type="submit" class="btn btn-primary w-100 py-8 fs-4 mb-4 rounded-2" id="memberBtn">회원가입</button>
               </div>
             </div>
           </div>
@@ -55,8 +55,8 @@
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    let memberData = [];
-    memberData = JSON.parse(localStorage.getItem('memberData'));
+    
+    let memberData = JSON.parse(localStorage.getItem('memberData'));
 
       document.querySelector('#memberBtn').addEventListener('click',function(e) {
         e.preventDefault();
@@ -64,14 +64,26 @@
         let pw = document.querySelector('input[name=pw]').value;
         let name = document.querySelector('input[name=name]').value;
         
-        let members = {id , pw, name};
-        memberData.push(members);
-        localStorage.setItem('memberData', JSON.stringify(memberData));
-        document.querySelector('input[name=id]').value = '';
-        document.querySelector('input[name=pw]').value = '';
-        document.querySelector('input[name=name]').value = '';
-        alert("회원가입이 완료되었습니다.");
+        // 아이디 중복 체크 후 생성
+        for(let i = 0; i < memberData.length; i++) {
+          if(memberData[i].id != id){
+            let members = {id , pw, name};
+            memberData.push(members);
+            localStorage.setItem('memberData', JSON.stringify(memberData));
+            document.querySelector('input[name=id]').value = '';
+            document.querySelector('input[name=pw]').value = '';
+            document.querySelector('input[name=name]').value = '';
+            alert("회원가입이 완료되었습니다.");
+            window.location.href = "index.html";
+            return;
+          }else {
+            alert('같은 아이디가 존재합니다.');
+            return;
+          }
+        }
       })
+
+
   </script>
 </body>
 

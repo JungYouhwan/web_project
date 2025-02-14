@@ -4,7 +4,10 @@ let productNew = [];
     productNew = JSON.parse(localStorage.getItem('newProduct'));
 let inventables = [];
     inventables = JSON.parse(localStorage.getItem('invenData'));
+    
+    let login = JSON.parse(localStorage.getItem('login'));
 
+    document.querySelector('#loginname').textContent = ' 안녕하세요. ' + login.name + '님';
     // 상단의 productNew table
     productNew.forEach(function (product) {
       let pro = `
@@ -75,6 +78,9 @@ let inventables = [];
                       table.innerHTML = str;
         }
     });
+
+   
+    
 
     // 날짜 데이터ㅋㅎㅋ
     let today = new Date;
